@@ -260,7 +260,10 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 2e227720fb0fc4456b1fdefeb3441719, type: 3}
   - {fileID: 4900000, guid: 8b9306dd165c84eaaa87303e21469afb, type: 3}
   - {fileID: 4900000, guid: da7f393f27f694ebe9b7ea4fcd773cfb, type: 3}
-  - {fileID: 4900000, guid: 0c35d0497a14648b98d3c7ad5271f00e, type: 3}
+  - {fileID: 4900000, guid: f260e4aba37f541399044ece05f6385f, type: 3}
+  - {fileID: 4900000, guid: bb769409bed59435ab1fc60bf18b9809, type: 3}
+  - {fileID: 4900000, guid: a62074267b6b54c6680e00b3bff8d980, type: 3}
+  redraw: 0
 --- !u!4 &312675887
 Transform:
   m_ObjectHideFlags: 0

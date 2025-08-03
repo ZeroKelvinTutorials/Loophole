@@ -12,3 +12,18 @@
 Should I introduce boxes right away? 
 It would be better not to to introduce things little by little maybe
 So when boxes come in, theyre already familiar with the rest.
+
+
+
+
+
+
+Plan: 
+Fall in first hole is unsolvable off the bat
+Fall in second hole and you have 2 holes, one takes you on a wall and is the good one.
+
+Plan:
+Push box on first hole
+Push box on second hole
+Push box on third hole
+win?

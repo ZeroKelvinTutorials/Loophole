@@ -19,5 +19,16 @@ namespace view
         {
             Instance = this;
         }
+
+
+        public bool redraw = false;
+        void Update()
+        {
+            if (redraw)
+            {
+                LevelController.RestartLevel();
+                redraw = false;
+            }
+        }
     }
 }
