@@ -1,0 +1,14 @@
+1. Just walls, goal, player. Need to solve by wrapping yourself around the screen (Loop around to reach the goal)
+2. 2 floors, need to navigate through holes to get to the goal (loop fall to reach the goal)
+3. 3 floors, maze-y quality to it. (3 is a pandoras box, would be nice eventually) (Keep looping)
+4. Introduce box, move it and be forced to watch it fall?  (Move boxes out of the way to reach your goal)
+4. box, move in the SAME floor, but needing to loop around to move (Keep looping)
+3. Box, Move around the floors to remove the box from the path, use rocks to move around 
+4. Introduce walking on walls (Use walls to reach your goal)
+5. Introduce moving the box to walk on walls strategically.
+
+
+
+Should I introduce boxes right away? 
+It would be better not to to introduce things little by little maybe
+So when boxes come in, theyre already familiar with the rest.
