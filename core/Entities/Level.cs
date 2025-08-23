@@ -7,7 +7,7 @@ namespace core
         public Board[] boards; //0 will be starting point (top)
         public int activeBoardIndex;
         public Player player;
-        public event Action<V2Int, Board> OnHoleEntered;
+        public event Action<V2Int> OnHoleEntered;
         public event Action<V2Int> OnWin;
 
         public Level(Board[] boards, int activeBoardIndex, Player player)
@@ -26,9 +26,9 @@ namespace core
             this.OnHoleEntered = null;
         }
 
-        public void InvokeOnHoleEntered(V2Int holePosition, Board newBoard)
+        public void InvokeOnHoleEntered(V2Int holePosition)
         {
-            OnHoleEntered?.Invoke(holePosition, newBoard);
+            OnHoleEntered?.Invoke(holePosition);
         }
 
         public void InvokeOnWin(V2Int goalPosition)

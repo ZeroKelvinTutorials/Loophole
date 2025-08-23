@@ -112,6 +112,8 @@ namespace core
                 Console.WriteLine("Last board");
             }
 
+            //TODO: ASSERT THAT A PLAYER EXISTS AND ANYTHING ELSE IMPORTANT, or maybe in level constructor?
+
             //Create Level from boards
             return new Level(boards.ToArray(), activeBoardIndex, player);
         }

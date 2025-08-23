@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 namespace core
 {
@@ -6,6 +7,8 @@ namespace core
     {
         public static bool TryMove(Player player, Level level, V2Int direction)
         {
+            Debug.Assert(player == level.player);
+
             Board board = level.boards[level.activeBoardIndex];
             V2Int playerPosition = level.player.position;
 
@@ -31,7 +34,6 @@ namespace core
                         if (board.GetTile(player.position).tileType == TileType.Rock || board.boxes.ContainsKey(player.position))
                         {
                             player.position = targetPosition;
-                            level.player.position = targetPosition;
                             player.direction = V2Int.Zero;
                             player.InvokeOnMove(targetPosition);
                             break;
@@ -80,7 +82,6 @@ namespace core
 
                     //If no box we move normally 
                     player.position = targetPosition;
-                    level.player.position = targetPosition;
                     player.direction = V2Int.Zero;
                     player.InvokeOnMove(targetPosition);
                     break;
@@ -89,7 +90,6 @@ namespace core
                     if (board.boxes.ContainsKey(player.position) || board.GetTile(player.position).tileType == TileType.Rock)
                     {
                         player.position = targetPosition;
-                        level.player.position = targetPosition;
                         player.direction = V2Int.Zero;
                         player.InvokeOnMove(targetPosition);
                     }
@@ -102,14 +102,11 @@ namespace core
                 case TileType.Ice:
                     //TODO: Add box logic although probably wont implement for this stage
                     player.position = targetPosition;
-                    level.player.position = targetPosition;
                     player.direction = direction;
                     player.InvokeOnMove(targetPosition);
                     //Todo. recursively call try move periodically...
                     break;
                 case TileType.Hole:
-                    player.position = targetPosition;
-
                     //Change board downwards
                     int boardIndex = level.activeBoardIndex + 1;
                     if (boardIndex == level.boards.Length)
@@ -117,8 +114,9 @@ namespace core
                         boardIndex = 0;
                     }
                     level.activeBoardIndex = boardIndex;
-                    level.player.position = targetPosition;
-                    level.InvokeOnHoleEntered(targetPosition, level.boards[boardIndex]);
+                    player.position = targetPosition;
+
+                    level.InvokeOnHoleEntered(targetPosition);
                     break;
                 default:
                     //error
@@ -131,7 +129,6 @@ namespace core
             }
 
             return true;
-            //Try Move recursively if direction not 0
         }
     }
 }

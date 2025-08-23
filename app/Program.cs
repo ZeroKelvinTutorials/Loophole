@@ -5,7 +5,7 @@ public static class Program
 {
     public static void Main()
     {
-        string[] lines = File.ReadAllLines("Levels/Level3.txt");
+        string[] lines = File.ReadAllLines("Levels/Level0.txt");
 
         Level level = LevelFactory.CreateLevel(lines);
         Print(level);

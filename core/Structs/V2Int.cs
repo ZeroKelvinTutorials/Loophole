@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace core
 {
     public struct V2Int
@@ -97,6 +99,11 @@ namespace core
         public V2Int InvertYAxis()
         {
             return new V2Int(x, -y);
+        }
+
+        public static V2Int[] CardinalDirections()
+        {
+            return new V2Int[4] { Down, Left, Right, Up };
         }
     }
 }

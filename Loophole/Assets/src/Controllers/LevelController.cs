@@ -63,9 +63,6 @@ namespace view
         public static void BoardTransition(V2Int position, Board newBoard)
         {
             LevelManager.Instance.StartCoroutine(BoardTransitionCoroutine(position));
-            //TODO: Animate fall
-            //Draw new board (without player)
-            //TODO: Animate Player falling into new board
         }
 
         static IEnumerator BoardTransitionCoroutine(V2Int position)
