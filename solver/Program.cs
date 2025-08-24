@@ -4,9 +4,10 @@ using core;
 
 public static class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
-        string[] lines = File.ReadAllLines("Levels/Level2.txt");
+        string file = args[0];
+        string[] lines = File.ReadAllLines(file);
 
         Level level = LevelFactory.CreateLevel(lines);
         if (SolutionController.FindShortestPath(level, out GameState winState))
